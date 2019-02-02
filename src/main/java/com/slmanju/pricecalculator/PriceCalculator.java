@@ -19,6 +19,8 @@ public class PriceCalculator {
             System.out.println("Item: " + line.id());
             System.out.println("Price: " + line.startPrice());
             System.out.println("Discount: " + line.discountAmount());
+            System.out.println("Discounted Amount: " + line.subtotal());
+            System.out.println("Tax: " + line.taxAmount());
             System.out.println("Final Amount: " + line.amount());
             System.out.println("-----------------------------------");
         });
