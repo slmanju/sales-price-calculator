@@ -15,6 +15,14 @@ public class PriceCalculator {
     }
     
     public int total() {
+        lineItemWrapper.lines().forEach(line -> {
+            System.out.println("Item: " + line.id());
+            System.out.println("Price: " + line.startPrice());
+            System.out.println("Discount: " + line.discountAmount());
+            System.out.println("Final Amount: " + line.amount());
+            System.out.println("-----------------------------------");
+        });
+        
         return subtotal();
     }
     
