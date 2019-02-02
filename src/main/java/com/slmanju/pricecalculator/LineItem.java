@@ -5,13 +5,13 @@ public class LineItem {
     private String id;
     private int price;
     private int quantity;
-    private int grossTotal;
-    private int calculatedAmount;
+    private int discount;
     
-    public LineItem(String id, int price, int quantity) {
+    public LineItem(String id, int price, int quantity, int discount) {
         this.id = id;
         this.price = price;
         this.quantity = quantity;
+        this.discount = discount;
     }
 
     public String getId() {
@@ -25,18 +25,9 @@ public class LineItem {
     public int getQuantity() {
         return quantity;
     }
-    
-    public int grossTotal() {
-        grossTotal = price * quantity;
-        return grossTotal;
-    }
 
-    public int getCalculatedAmount() {
-        return calculatedAmount;
-    }
-
-    public void setCalculatedAmount(int calculatedAmount) {
-        this.calculatedAmount = calculatedAmount;
+    public int getDiscount() {
+        return discount;
     }
 
 }
